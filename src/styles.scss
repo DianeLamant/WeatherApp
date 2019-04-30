@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    padding:0;
+    font-family: 'Montserrat', sans-serif;
+    &:before {
+        content: "";
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+        background: linear-gradient(#684db3, #ca81bd);
+        // background: url("./assets/img/sunny2.png");
+        // background-position: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    p {
+        margin: inherit;
+        line-height: inherit;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        font-size: 1.2rem;
+        &:last-child {
+            margin-bottom: 1em;
+        }
+    }
+}

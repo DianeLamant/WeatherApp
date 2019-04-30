@@ -1,0 +1,71 @@
+h1 {
+    text-align: center;
+    font-family: 'Cabin', cursive;
+    font-size: 2.2rem;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+
+.divider {
+    height: 1px;
+    margin: auto;
+    width: 100%;
+    background-color: rgba($color: black, $alpha: 0.15);
+}
+
+.part {
+    background-color: rgba($color: white, $alpha: 0.2);
+    padding: 0 5%;
+}
+
+.infos {
+    img {
+        width: 10%;
+    }
+}
+
+.infosSup {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 5%;
+}
+
+#weatherNow {
+    text-align: center;
+    padding: 10%;
+    img {
+        width: 80%;
+    }
+}
+#tempNow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    p {
+        font-size: 1.4rem;
+    }
+    img {
+        width: 10%;
+    }
+}
+#blockTempVar {
+    display: flex;
+    .tempVar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 20%;
+        }
+    }
+}
+
+#btnSearch {
+    text-align: end;
+    padding: 1.5rem 2rem;
+    button {
+        opacity: 0.6;
+    }
+}

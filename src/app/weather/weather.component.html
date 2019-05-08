@@ -1,50 +1,59 @@
-<span *ngIf="!data">Loading ...</span>
+<span *ngIf="!weatherService.weatherData">Loading ...</span>
 
-<section *ngIf="data">
-  <h1>{{ city }}, {{ data.sys.country }}</h1>
+<section *ngIf="weatherService.weatherData">
+  <h1>{{ weatherService.city }}, {{ weatherService.countryCode }}</h1>
 
   <div class="divider"></div>
 
   <div id="tempNow" class="part">
-    <img src="../assets/img/005-warm.svg" alt="">
-    <p>{{ data.main.temp }}°C</p>
+    <img src="assets/img/005-warm.svg" alt="">
+    <p>{{ weatherService.weatherData.main.temp }}°C</p>
   </div>
 
   <div class="divider"></div>
 
-  <div id="weatherNow">
-    <img [src]="imgWeather[data.weather[0].main]" alt="" class="animated infinite pulse">
-  </div>
+  <div id="container">
 
-
-  <div class="divider"></div>
-
-  <div id="blockTempVar" class="part infos">
-    <div class="tempVar">
-      <img src="../assets/img/025-cold.svg" alt="">
-      <p>{{ data.main.temp_min }}°C</p>
+    <div id="weatherNow">
+      <img [src]="imgWeather[weatherService.weatherData.weather[0].main]" alt="" class="animated infinite pulse">
     </div>
-    <div class="tempVar">
-      <img src="../assets/img/026-warm-1.svg" alt="">
-      <p>{{ data.main.temp_max }}°C</p>
+
+
+    <div class="divider"></div>
+
+    <div id="blockInfos">
+
+      <div id="blockTempVar" class="part infos">
+        <div class="tempVar">
+          <img src="assets/img/025-cold.svg" alt="">
+          <p>{{ weatherService.weatherData.main.temp_min }}°C</p>
+        </div>
+        <div class="tempVar">
+          <img src="assets/img/026-warm-1.svg" alt="">
+          <p>{{ weatherService.weatherData.main.temp_max }}°C</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="infos infosSup">
+        <img src="assets/img/013-windy.svg" alt="">
+        <p>{{ weatherService.weatherData.wind.speed }} m/s</p>
+        <img src="assets/img/023-sunrise.svg" alt="">
+        <p>{{weatherService.sunrise | date: 'HH:mm'}}</p>
+        <img src="assets/img/024-sunset.svg" alt="">
+        <p>{{weatherService.sunset | date: 'HH:mm'}}</p>
+      </div>
+
     </div>
+    <div class="divider"></div>
   </div>
 
-  <div class="divider"></div>
 
-  <div class="infos infosSup">
-    <img src="../assets/img/013-windy.svg" alt="">
-    <p>{{ data.wind.speed }} m/s</p>
-    <img src="../assets/img/023-sunrise.svg" alt="">
-    <p>{{sunrise | date: 'HH:mm'}}</p>
-    <img src="../assets/img/024-sunset.svg" alt="">
-    <p>{{sunset | date: 'HH:mm'}}</p>
-  </div>
-
-  <div class="divider"></div>
   <div id="btnSearch">
     <button [routerLink]="['/search']" class="large circular ui inverted secondary icon button">
       <i class="icon plus"></i>
     </button>
   </div>
+
 </section>

@@ -6,11 +6,11 @@ import { SearchComponent } from './search/search.component';
 const routes: Routes = [
   {
     path: "",
-    component: WeatherComponent
+    component: WeatherComponent,
   },
   {
     path: "search",
-    component: SearchComponent
+    component: SearchComponent,
   }
 ];
 

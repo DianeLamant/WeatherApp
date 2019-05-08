@@ -69,3 +69,70 @@ h1 {
         opacity: 0.6;
     }
 }
+
+@media screen and (min-width: 768px) {
+    #tempNow {
+        p {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+    #container {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        .divider {
+            display: none;
+        }
+        #weatherNow {
+            width: 50%;
+            padding: 5%;
+            img {
+                width: 90%;
+            }
+        }
+        #blockInfos {
+            width: 50%;
+            border: 1px solid rgba($color: black, $alpha: 0.15);
+            height: 20rem;
+            .infos {
+                height: 50%;
+                img {
+                    width: 15%;
+                }
+                p {
+                    font-size: 1.4rem;
+                }
+            }
+            .infosSup {
+                border-top: 1px solid rgba($color: black, $alpha: 0.15);
+            }
+            .part {
+                background-color: transparent;
+            }
+            #blockTempVar {
+                .tempVar {
+                    img {
+                        width: 25%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    h1 {
+        font-size: 2.6rem;
+    }
+    #tempNow {
+        justify-content: flex-end;
+    }
+    #container {
+        #weatherNow {
+            img {
+                width: 60%;
+            }
+        }
+    }
+}

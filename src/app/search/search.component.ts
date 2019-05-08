@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
   fixedOptions: any;
   reconfigurableOptions: any;
 
-  constructor(private weatherService: WeatherService, private router: Router) { }
+  constructor(public weatherService: WeatherService, private router: Router) { }
 
   ngOnInit() {
     console.log(this.searchInput);

@@ -17,10 +17,7 @@ export class WeatherComponent implements OnInit {
     Drizzle: "assets/img/007-rainy.svg",
   }
 
-  sunrise = null;
-  sunset = null;
-
-  constructor(private weatherService: WeatherService) { }
+  constructor(public weatherService: WeatherService) { }
 
   ngOnInit() {
     this.weatherService.getWeather().subscribe();

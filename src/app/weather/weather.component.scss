@@ -1,10 +1,22 @@
+#btnSearch {
+    position: absolute;
+    left: 90%;
+    transform: translate(-50%);
+    button {
+        opacity: 0.6;
+    }
+}
+
 h1 {
+    max-width: 70%;
     text-align: center;
     font-family: 'Cabin', cursive;
     font-size: 2.2rem;
+    margin: auto;
     margin-block-start: 0.83em;
     margin-block-end: 0.83em;
 }
+
 
 .divider {
     height: 1px;
@@ -62,13 +74,6 @@ h1 {
     }
 }
 
-#btnSearch {
-    text-align: end;
-    padding: 1.5rem 2rem;
-    button {
-        opacity: 0.6;
-    }
-}
 
 @media screen and (min-width: 768px) {
     #tempNow {

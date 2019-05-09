@@ -1,6 +1,13 @@
 <span *ngIf="!weatherService.weatherData">Loading ...</span>
 
 <section *ngIf="weatherService.weatherData">
+
+  <div id="btnSearch">
+    <button [routerLink]="['/search']" class="circular small ui inverted grey icon button">
+      <i class="icon large map marker alternate"></i>
+    </button>
+  </div>
+
   <h1>{{ weatherService.city }}, {{ weatherService.countryCode }}</h1>
 
   <div class="divider"></div>
@@ -50,10 +57,5 @@
   </div>
 
 
-  <div id="btnSearch">
-    <button [routerLink]="['/search']" class="large circular ui inverted secondary icon button">
-      <i class="icon plus"></i>
-    </button>
-  </div>
 
 </section>
